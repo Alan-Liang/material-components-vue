@@ -16,7 +16,8 @@
   ],
   "homepage": "https://matsp.github.io/material-components-vue",
   "files": [
-    "dist"
+    "dist",
+    "components"
   ],
   "scripts": {
     "lint": "eslint --ext .js --ext .vue --fix ./",
