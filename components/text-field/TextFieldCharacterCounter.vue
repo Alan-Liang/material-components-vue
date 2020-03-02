@@ -1,5 +1,8 @@
 <template>
-  <div class="mdc-text-field-character-counter" @_init="onParentInit">
+  <div
+    class="mdc-text-field-character-counter"
+    @_init="onParentInit"
+  >
     {{ currentLength }} / {{ maxLength }}
   </div>
 </template>
@@ -11,7 +14,11 @@ import { baseComponentMixin, themeClassMixin } from '../base'
 
 export default {
   mixins: [baseComponentMixin, themeClassMixin],
-  inject: ['getCharacterCounter'],
+  inject: {
+    getCharacterCounter: {
+      default: null
+    }
+  },
   props: {
     currentLength: {
       type: Number,
